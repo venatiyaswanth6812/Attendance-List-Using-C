@@ -1,0 +1,45 @@
+#include<stdio.h>
+int main()
+{
+    int n,rno;
+    printf("enter the strength of class:");
+    scanf("%d",&n);
+    
+    printf("........ABSETIES LIST..........");
+    int arr[n];
+    for(int i=1;i<=n;i++)
+    {
+        arr[i]=i;
+    }
+    for(int i=1;i<=n;i++)
+    {
+       printf("%d\n",i);
+    }
+    do
+    {
+         printf("Enter your roll number:");
+         scanf("%d",&rno);
+         for(int i=1;i<=n;i++)
+         {
+              if(arr[i]==rno)
+              {
+                   arr[i]=0;
+              }
+              else
+               {
+                   continue;
+              }
+         }
+         printf(".......ABESNTIES LIST........");
+         for(int i=1;i<=n;i++)
+         {
+              if(arr[i]!=0)
+              {
+                   printf("%d\n",arr[i]);
+              }else
+              {
+                   continue;
+              }
+          }
+}while(1);
+}
